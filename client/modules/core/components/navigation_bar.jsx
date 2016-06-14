@@ -65,7 +65,7 @@ class NavigationBar extends React.Component {
               {this.renderBarItem(this.props.barItems) }
             </ul>
             <ul className="nav navbar-nav navbar-right">
-              <li><a href="../navbar-static-top/">Thai Tran</a></li>
+              <li><a href="../navbar-static-top/"></a></li>
             </ul>
           </div>{/*/.nav-collapse */}
         </div>
