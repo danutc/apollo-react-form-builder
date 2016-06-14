@@ -11,7 +11,8 @@ Technology:
 - form engine: [Mozilla Services react-jsonschema-form](https://github.com/mozilla-services/react-jsonschema-form)
 - schemas: [IETF JSON Schema Internet Draft Version 4](http://json-schema.org/documentation.html)
 - data access: [apollostack](https://github.com/apollostack/apollo)
-- UI / components / widgets: [Mantra](https://github.com/kadirahq/mantra)
+- front end achitecture: [Mantra](https://github.com/kadirahq/mantra)
+- widgets: [Draft.js](https://facebook.github.io/draft-js/)
 - sample form builder: [Kinto formbuilder](https://github.com/Kinto/formbuilder)
 
 ##How does it work?
