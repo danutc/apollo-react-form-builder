@@ -58,7 +58,7 @@ class NavigationBar extends React.Component {
               <span className="icon-bar" />
               <span className="icon-bar" />
             </button>
-            <a className="navbar-brand" href="#">Clearbridge</a>
+            <a className="navbar-brand" href="#">Apollo Form Builder</a>
           </div>
           <div id="navbar" className="navbar-collapse collapse">
             <ul className="nav navbar-nav">
