@@ -13,7 +13,7 @@ Technology:
 - data access: [apollostack](https://github.com/apollostack/apollo)
 - front end achitecture: [Mantra](https://github.com/kadirahq/mantra), [React](https://facebook.github.io/react/)
 - Framework: [meteor](www.meteor.com)
-- widgets: [Draft.js](https://facebook.github.io/draft-js/)
+- widgets: [Draft.js](https://facebook.github.io/draft-js/), [Ace Editor](https://github.com/securingsincity/react-ace)
 - sample form builder: [Kinto formbuilder](https://github.com/Kinto/formbuilder)
 
 ##How does it work?
