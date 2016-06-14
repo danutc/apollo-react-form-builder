@@ -30,3 +30,10 @@ At runtime:
 - user submits the form: **formData** is generated and submited to datasources over **apollostack**
 - **apollostack** loads mongodb / SQL / REST schemas by **formKey**
 - using schemas apollostack splits **formData** and sends the relevant fields to appropriate **datasource**.
+
+##How to run?
+- Clone the repository
+- `meteor npm install`
+- `meteor` 
+- Go to (http://localhost:3000/form) to see the result 
+- Happy hacking !!!
