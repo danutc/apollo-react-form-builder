@@ -17,12 +17,14 @@ Technology:
 - sample form builder: [Kinto formbuilder](https://github.com/Kinto/formbuilder)
 
 ##How does it work?
+Each datasource has schema describing data objects. At design time JSONSchema formData fields are mapped to datasource schemas.
+
 At design time form builder generates and saves in mongodb **FormDefinitions** collection:
 - JSONSchema (**what** to render on the form)
 - UISchema (**how** to render on the form)
-- n x mongodb document schemas (mongodb datasources)
-- m x SQL table schemas (SQL datasources)
-- k x REST endpoint schemas (REST datasources)
+- n x mongodb document formData mapping schemas (mongodb datasources)
+- m x SQL table formData mapping schemas (SQL datasources)
+- k x REST endpoint formData mapping schemas (REST datasources)
 
 Each form type is identified by a **formKey** so the schemas can be found and loaded from **FormDefinitions** collection.
 
