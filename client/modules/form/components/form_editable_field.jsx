@@ -169,6 +169,7 @@ export default class FormEditableField extends React.Component {
         onDoubleClick={this._handleEdit.bind(this) }
         onDrop={this._handleDrop.bind(this) }>
         <SchemaField {...props}
+          onChange={(value) => console.log(value)}
           idSchema={{ id: this.props.id }}
           uiSchema={this.props.uiSchema}
           schema={this.props.schema}
