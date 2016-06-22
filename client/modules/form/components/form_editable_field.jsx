@@ -130,7 +130,6 @@ export default class FormEditableField extends React.Component {
       return (
         <FieldPropertiesEditor
           {...props}
-          change={this._handleOnChange.bind(this)}
           submit={this._handleUpdate.bind(this) }
           cancel={this._handleCancel.bind(this) } />
       );
