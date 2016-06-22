@@ -18,7 +18,7 @@ function shouldHandleDoubleClick(node) {
   if (node.tagName === "INPUT" && node.getAttribute("type") === "number") {
     return false;
   }
-  
+
   return true;
 }
 
@@ -28,7 +28,7 @@ class FieldPropertiesEditor extends React.Component {
   }
 
   render() {
-    const {submit, cancel, editSchema} = this.props;
+    const {submit, cancel, editSchema, change} = this.props;
 
     return (
       <div className="panel panel-default field-editor">
@@ -41,6 +41,7 @@ class FieldPropertiesEditor extends React.Component {
         </div>
         <div className="panel-body">
           <Form
+            onChange={change}
             schema={editSchema}
             onSubmit={submit} />
         </div>
@@ -93,9 +94,9 @@ export default class FormEditableField extends React.Component {
     editElement(this.props['id']);
   }
 
-  _handleUpdate(event) {
+  _handleUpdate(form) {
     var {updateElement} = this.props;
-    updateElement(this.props['id'], {});
+    updateElement(this.props['id'], form['formData']);
   }
 
   _handleDelete(event) {
@@ -122,6 +123,12 @@ export default class FormEditableField extends React.Component {
     }
   }
 
+  _handleOnChange(event) {
+    // var value = event.target.value;
+    // console.log(event.target);
+    // console.log(value);
+  }
+
   render() {
     const props = this.props;
 
@@ -129,6 +136,7 @@ export default class FormEditableField extends React.Component {
       return (
         <FieldPropertiesEditor
           {...props}
+          change={this._handleOnChange.bind(this)}
           submit={this._handleUpdate.bind(this) }
           cancel={this._handleCancel.bind(this) } />
       );
@@ -168,7 +176,7 @@ export default class FormEditableField extends React.Component {
         onDoubleClick={this._handleEdit.bind(this) }
         onDrop={this._handleDrop.bind(this) }>
         <SchemaField {...props}
-          onChange={() => console.log('changed') }
+          onChange={this._handleOnChange.bind(this) }
           idSchema={{ id: this.props.id }}
           uiSchema={this.props.uiSchema}
           schema={this.props.schema}

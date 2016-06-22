@@ -58,6 +58,7 @@ export default {
     var element = form_fields[id];
     console.log('updating');
     console.log(params);
+    console.log(element);
         
     element['edit'] = false;
     form_fields[id] = element;
