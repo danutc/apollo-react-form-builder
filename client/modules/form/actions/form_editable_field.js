@@ -58,24 +58,26 @@ export default {
     var element = form_fields[id];
     console.log('updating');
 
+    
+
     console.log(params);
     console.log(element);
 
+    element['ui'] = element['ui'] || {};
     if (params && params['label']) {
       element['def']['title'] = params['label'];
     }
 
     if (params && params['class']) {
-      
-      
+        element['ui']['ui:classNames'] = params['class'];
     }
 
     if (params && params['defaultValue']) {
       element['def']['default'] = params['defaultValue'];
     }
 
-    if (params && params['label']) {
-      
+    if (params && params['hint']) {
+      element['ui']['ui:help'] = params['hint'];
     }
 
     if (params && params['label']) {
