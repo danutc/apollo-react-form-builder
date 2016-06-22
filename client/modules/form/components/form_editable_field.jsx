@@ -123,12 +123,6 @@ export default class FormEditableField extends React.Component {
     }
   }
 
-  _handleOnChange(event) {
-    // var value = event.target.value;
-    // console.log(event.target);
-    // console.log(value);
-  }
-
   render() {
     const props = this.props;
 
