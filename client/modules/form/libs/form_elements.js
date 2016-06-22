@@ -26,10 +26,16 @@ var commonEditFormSchema = {
   }
 }
 
+
 // element definition
+// conf.app.loaUploads=@app.loaUploads@
+
+
+// app.loaUploads=//home//ec2-user//capelle//loa
+
 const elements = {
   'input': {
-    def: { type: 'string', title: 'Input' },
+    def: { type: 'string', title: 'Input'},
     edit: false,
     editSchema: commonEditFormSchema
   },

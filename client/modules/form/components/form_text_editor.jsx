@@ -13,11 +13,14 @@ class FormTextEditor extends React.Component {
   }
 
   render() {
+    var {defaultValue} = this.props;
+
     return (
       <div>
         <AceEditor
           mode="javascript"
           theme="github"
+          value={defaultValue}
           onChange={() => { console.log('test'); } }
           name={this.props.id}
           editorProps={{ $blockScrolling: true }}
