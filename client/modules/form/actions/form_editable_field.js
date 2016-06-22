@@ -57,9 +57,30 @@ export default {
     
     var element = form_fields[id];
     console.log('updating');
+
     console.log(params);
     console.log(element);
-        
+
+    if (params && params['label']) {
+      element['def']['title'] = params['label'];
+    }
+
+    if (params && params['class']) {
+      
+      
+    }
+
+    if (params && params['defaultValue']) {
+      element['def']['default'] = params['defaultValue'];
+    }
+
+    if (params && params['label']) {
+      
+    }
+
+    if (params && params['label']) {
+      
+    }   
     element['edit'] = false;
     form_fields[id] = element;
     

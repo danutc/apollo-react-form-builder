@@ -22,7 +22,7 @@ var commonEditFormSchema = {
     class: { type: 'string', title: 'Class' },
     defaultValue: { type: 'string', title: 'Default Value' },
     placeHolder: { type: 'string', title: 'Place Holder' },
-    Hint: { type: 'string', title: 'Hint' }
+    hint: { type: 'string', title: 'Hint' }
   }
 }
 
