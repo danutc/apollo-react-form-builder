@@ -9,9 +9,11 @@ class FormErrorTab extends React.Component {
   }
 
   render() {
+    var {onChange} = this.props;
+
     return (
       <div>
-        <FormTextEditor id="form-error-editor" defaultValue={onErrorSnippets} type="onError" />
+        <FormTextEditor id="form-error-editor" defaultValue={onErrorSnippets} type="onError" onChange={onChange} />
       </div>
     );
   }

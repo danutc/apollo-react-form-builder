@@ -21,6 +21,11 @@ class FormPlayground extends React.Component {
     clearForm();
   }
   
+  _onChangeFromEditor(type, value) {
+    console.log(type);
+    console.log(value);
+  }
+
   render() {
     return (
       <div>
@@ -43,13 +48,13 @@ class FormPlayground extends React.Component {
             <FormBuilderTab />
           </div>
           <div className="tab-pane" id="validation">
-            <FormValidationTab />
+            <FormValidationTab onChange={this._onChangeFromEditor}/>
           </div>
           <div className="tab-pane" id="change">
-            <FormChangeTab />
+            <FormChangeTab onChange={this._onChangeFromEditor}/>
           </div>
           <div className="tab-pane" id="error">
-            <FormErrorTab />
+            <FormErrorTab onChange={this._onChangeFromEditor}/>
           </div>
           <div className="tab-pane" id="preview">
             <FormPreviewTab />

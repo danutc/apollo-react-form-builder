@@ -1,6 +1,9 @@
 import React from 'react';
 import Form from "react-jsonschema-form";
 
+//--------------------------------------------------------------------------------
+// Preview tab component
+//--------------------------------------------------------------------------------
 class FormPreviewTab extends React.Component {
   constructor(props) {
     super(props);
@@ -9,7 +12,7 @@ class FormPreviewTab extends React.Component {
   render() {
     return (
       <div>
-        <Form schema={this.props.schema} uiSchema={this.props.ui} widgets={this.props.widgets} />
+        <Form schema={this.props.schema} onSubmit={(form) => { console.log(form) } }uiSchema={this.props.ui} widgets={this.props.widgets} />
       </div>
     );
   }

@@ -9,7 +9,9 @@ class FormValidationTab extends React.Component {
   }
 
   render() {
-    return <FormTextEditor id="form-validation-editor" defaultValue={validateSnippets} type="validation" />;
+    var {onChange} = this.props;
+
+    return <FormTextEditor id="form-validation-editor" defaultValue={validateSnippets} type="validation" onChange={onChange} />;
   }
 }
 

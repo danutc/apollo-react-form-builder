@@ -13,7 +13,7 @@ class FormTextEditor extends React.Component {
   }
 
   render() {
-    var {defaultValue} = this.props;
+    var {defaultValue, onChange, type} = this.props;
 
     return (
       <div>
@@ -21,7 +21,7 @@ class FormTextEditor extends React.Component {
           mode="javascript"
           theme="github"
           value={defaultValue}
-          onChange={() => { console.log('test'); } }
+          onChange={(value) => { onChange(type, value) } }
           name={this.props.id}
           editorProps={{ $blockScrolling: true }}
           />

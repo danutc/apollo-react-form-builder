@@ -9,9 +9,11 @@ class FormChangeTab extends React.Component {
   }
 
   render() {
+    var {onChange} = this.props;
+
     return (
       <div>
-        <FormTextEditor id="form-change-editor" defaultValue={onChangeSnippets} type="onChange" />
+        <FormTextEditor id="form-change-editor" defaultValue={onChangeSnippets} type="onChange" onChange={onChange} />
       </div>
     );
   }
