@@ -1,7 +1,7 @@
 export default {
   saveFromEditor({LocalState}, type, value) {
     var FINAL_FORM_ENTITY = LocalState.get('FINAL_FORM_ENTITY')
-    FINAL_FORM_ENTITY[type] = value
+    FINAL_FORM_ENTITY[type] = `(${value})`
 
     LocalState.set('FINAL_FORM_ENTITY', FINAL_FORM_ENTITY)
   },
