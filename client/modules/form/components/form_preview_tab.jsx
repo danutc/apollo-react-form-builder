@@ -10,9 +10,22 @@ class FormPreviewTab extends React.Component {
   }
 
   render() {
+    var {schema, ui, widgets, validation, onChange, onError} = this.props;
+
+    var validateFn = eval(validation);
+    var onChangeFn = eval(onChangeFn);
+    var onErrorFn = eval(onError);
+
     return (
       <div>
-        <Form schema={this.props.schema} onSubmit={(form) => { console.log(form) } }uiSchema={this.props.ui} widgets={this.props.widgets} />
+        <Form schema={schema} 
+          onSubmit={(form) => { console.log(form)}}
+          uiSchema={ui} 
+          widgets={widgets}
+          validate={validateFn}
+          onChange={onChangeFn}
+          onError={onChangeFn} 
+        />
       </div>
     );
   }

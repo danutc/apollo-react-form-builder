@@ -9,30 +9,34 @@ import FormErrorTab from '../containers/form_error_tab.js';
 class FormPlayground extends React.Component {
   constructor(props) {
     super(props);
+    this._onChangeFromEditor = this._onChangeFromEditor.bind(this);
   }
-  
+
   _saveForm(event) {
-    var {saveForm} = this.props;
-    saveForm();
+    var {saveForm} = this.props
+    saveForm()
   }
-  
+
   _clearForm(event) {
-    var {clearForm} = this.props;
-    clearForm();
+    var {clearForm} = this.props
+    clearForm()
   }
-  
+
   _onChangeFromEditor(type, value) {
-    console.log(type);
-    console.log(value);
+    var {saveFromEditor} = this.props
+    console.log(type)
+    console.log(value)
+
+    saveFromEditor(type, value)
   }
 
   render() {
     return (
       <div>
         <div className="btn-group form-builder-menu pull-right" role="group" aria-label="...">
-          <button type="button" className="btn btn-success" onClick={this._saveForm.bind(this)}>Save</button>
+          <button type="button" className="btn btn-success" onClick={this._saveForm.bind(this) }>Save</button>
           <button type="button" className="btn btn-info">Open</button>
-          <button type="button" className="btn btn-danger" onClick={this._clearForm.bind(this)}>Clear</button>
+          <button type="button" className="btn btn-danger" onClick={this._clearForm.bind(this) }>Clear</button>
         </div>
 
         <ul className="nav nav-tabs" id="myTab">
@@ -61,7 +65,7 @@ class FormPlayground extends React.Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
