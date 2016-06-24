@@ -78,7 +78,8 @@ export default {
       element['ui']['ui:help'] = params['hint']
     }
 
-    if (params && params['label']) {
+    if (params && params['placeHolder']) {
+      element['def']['description'] = params['placeHolder']
     }
 
     element['edit'] = false
