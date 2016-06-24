@@ -1,8 +1,5 @@
 # apollo-react-form-builder
-<<<<<<< HEAD
-=======
 extends [mantra-react-form-builder](https://github.com/apollo-forms/mantra-react-form-builder) to handle forms linked to multiple datasources over [apollostack](https://github.com/apollostack/apollo)
->>>>>>> 8e169aa3531735ac102722b51db6b1b379994003
 
 One form instance is linked to multiple datasources:
 - n x mongodb documents (in one or several collections)
@@ -11,18 +8,6 @@ One form instance is linked to multiple datasources:
 
 For example some fields on a form are loaded / posted to a mongodb document and the rest are loaded / posted to a REST endpoint.
 
-<<<<<<< HEAD
-Technology:
-- form engine: [Mozilla Services react-jsonschema-form](https://github.com/mozilla-services/react-jsonschema-form)
-- schemas: [IETF JSON Schema Internet Draft Version 4](http://json-schema.org/documentation.html)
-- data access: [apollostack](https://github.com/apollostack/apollo)
-- front end achitecture: [Mantra](https://github.com/kadirahq/mantra), [React](https://facebook.github.io/react/)
-- Framework: [meteor](www.meteor.com)
-- widgets: [Draft.js](https://facebook.github.io/draft-js/), [Ace Editor](https://github.com/securingsincity/react-ace)
-- sample form builder: [Kinto formbuilder](https://github.com/Kinto/formbuilder)
-
-=======
->>>>>>> 8e169aa3531735ac102722b51db6b1b379994003
 ##How does it work?
 Each datasource has schema describing data objects. At design time JSONSchema formData fields are mapped to datasource schemas.
 
