@@ -9,7 +9,7 @@ class FormValidationTab extends React.Component {
   }
 
   render() {
-    return <FormTextEditor id="form-validation-editor" defaultValue={validateSnippets}/>;
+    return <FormTextEditor id="form-validation-editor" defaultValue={validateSnippets} type="validation" />;
   }
 }
 

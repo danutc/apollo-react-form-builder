@@ -11,7 +11,7 @@ class FormErrorTab extends React.Component {
   render() {
     return (
       <div>
-        <FormTextEditor id="form-error-editor" defaultValue={onErrorSnippets}/>
+        <FormTextEditor id="form-error-editor" defaultValue={onErrorSnippets} type="onError" />
       </div>
     );
   }
